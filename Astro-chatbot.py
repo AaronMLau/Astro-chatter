@@ -9,9 +9,13 @@
 #
 # =========================================================================================================
 
-# Using only a few libraries
 import re
 from collections import defaultdict
+# thread allows us to lookup without interruption
+import threading
+# os allows us to connect to the internet, see here:
+# https://stackoverflow.com/questions/54479347/simplest-way-to-connect-wifi-python
+import os
 
 dst = defaultdict(list)
 
@@ -20,15 +24,36 @@ dst = defaultdict(list)
 # Returns: A list ([]) of (slot, value) pairs.  Slots should be strings; values can be whatever is most
 #          appropriate for the corresponding slot.  If no slot values are extracted, the function should
 #          return an empty list.
+# Spawns: A lookup in a seperate thread (if possible) based on the user's query, 
+#         which will block at nlp function for the query to return with wikipedia results
+#         will have other sources as well, but rely mostly on wikipedia
 def nlu(input=""):
-    # [YOUR CODE HERE]
-    
-    # Dummy code for sample output (delete or comment out when writing your code!):
     slots_and_values = []
+
+    # Get the user's intent, and if it's to ask a question (or confirm a statement) spawn a worker
+    # thread to lookup results online.
+    user_intent = ""
+
+    # possible dialogue_state_history values are:
+    # 'greetings','who_am_i','prompt_user','question','thinking','answer','check_correctness','off_topic','source','find_out_more','cool_fact','unsure_answer','forbidden_speech','goodbye'
+    # possible user_intent_history values are:
+    # 'greetings','question','statement','unknown','learn_more','inappropriate_speech','goodbye'
+    
+    # if there's no dialouge_state_history, then this is likely 'greetings' and the bot
+    # should start from the beginnning state
+    if "dialouge_state_history" not in dst:
+        user_intent = "greetings"
+        slots_and_values.append(("user_intent_history", ["greetings"]))
+
+    # User intent is most likey to be found in the text and grammar of the input, not in the dialogue history
+    # thus, send the dialogue to the parser
+    parsed = parse(input)
+
+
+
     
     # To narrow the set of expected slots, you may (optionally) first want to determine the user's intent,
     # based on what the chatbot said most recently.
-    user_intent = ""
     if "dialogue_state_history" in dst:
         if dst["dialogue_state_history"][0] == "request_size":
             # Check to see if the input contains a valid size.
@@ -57,12 +82,7 @@ def nlu(input=""):
                     user_intent = "unknown"
                     slots_and_values.append(("user_intent_history", ["unknown"]))
             
-    # If you're maintaining a dialogue state history but there's nothing there yet, this is probably the
-    # first input of the conversation!
-    else:
-        user_intent = "greeting"
-        slots_and_values.append(("user_intent_history", ["greeting"]))
-        
+    
     # Then, based on what type of user intent you think the user had, you can determine which slot values
     # to try to extract.
     if user_intent == "respond_size":
@@ -154,6 +174,7 @@ def dialogue_policy(dst=[]):
     elif dst["dialogue_state_history"][0] == "answer" or dst["dialogue_state_history"][0] == "check_correctness" or dst["dialogue_state_history"][0] == "off_topic" and dst["user_intent_history"][0] == "more_info":
         next_state = "sources"
         # slot values here will be the sources, with a snippet about each one
+        # these sources are taken from the fetch algorithm, not here, so this will stay empty here
         # type: list of strings
         slot_values = [] 
     elif dst["dialogue_state_history"][0] == "answer" or dst["dialogue_state_history"][0] == "check_correctness" or dst["dialogue_state_history"][0] == "off_topic" and dst["user_intent_history"][0] == "thanks":
@@ -202,10 +223,52 @@ def nlg(state, slots=[]):
     return output
 
 
+# parse will assign the part of speech to each word in the input, using the Veterbi algorithm
+# then filter unnessesary words to get the response slot values and appropriate lookup string
+def parse(input=""):
+    #TODO: implement veterbi algorithm (log-based)
+    # Veterbi is a dynamic programming approach to assigning part-of-speech
+    # labels to words. This implementation is based on the Pseudocode found here:
+    # https://web.stanford.edu/~jurafsky/slp3/8.pdf#subsection.8.4.5
+
+    # split input into observations (i.e. split into words, removing punctuation)
+    res = Veterbi()
+
+    # TODO: investigate wordnet & implement it in data folder
+    # https://www.youtube.com/watch?v=2IHA8QgKwbw
+    def Veterbi(observations,state_matrix,emission_matrix,trans_prob=None):
+        # Parameters:
+        # observations      array(T,): observation state sequence, int dtype.
+        # state_matrix      array(K,K): state transition matrix, an HMM
+        # emission_matrix   array(K,M): emisson matrix, based on the HMM probabilites
+        # trans_prob        Optional; array(K,): initial state probailities, trans_prob[i] is the probability
+        #                                        x[0] == i. If None, uniform initial distribution is assumed: 
+        #                                        trans_prob[:] == 1/K
+
+        # Returns:
+
+
+        # Create a path probability matrix Viterbi[N,T]
+        V = [{}]
+        # Cardinality of the state sequence
+        K = len(observations)
+        # Set up the initial probabilites and backpointer:
+        # see trans_prob above for explanation: [1/k] * K makes a 1D array size K filled with values of 1/K
+        trans_prob = trans_prob if trans_prob is not None else [1/K] * K
+        # it's 1-K, but 1+k here becuase of how range() works
+        for state in range(1,1+K):
+            # multiply trans_prob by emission_matrix at state
+            V[0][state] = {trans_prob[state]*emission_matrix[state]}
+            # backpointer is a 1D array
+            # TODO: implement backpointer
+            pass
+        pass
+
+
+
 
 # Use this main function to test your code when running it from a terminal
-# Sample code is provided to assist with the assignment, feel free to change/remove it if you want
-# You can run the code from terminal as: python3 chatbot.py
+# Eventually will have a function to place it in a website that can be called
 
 def main():
     
@@ -228,7 +291,7 @@ def main():
         
         # Store the extracted slots and values in the dialogue state tracker.
         update_dst(slots_and_values)
-        
+
         # Get the full contents of the dialogue state tracker at this time.
         current_state_tracker = get_dst()
         
