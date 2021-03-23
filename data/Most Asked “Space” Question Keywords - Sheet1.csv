@@ -1,0 +1,384 @@
+Num,Most Asked “Space” Question Keywords,Intent,Subtopic
+1,how long does it take to get to mars,Mars,Distance
+2,what does nasa stand for,Nasa,Summary
+3,how far is mars from earth,Mars,Distance
+4,how long would it take to get to mars,Mars,Distance
+5,how many moons does mars have,Mars,Satellites
+6,is there life on mars,Mars,Life
+7,what is an asteroid,Asteroid,Summary
+8,how to become an astronaut,Astronaut,Application
+9,can you hear sounds in space,Astrophysics,Sound
+10,what is the temperature on mars,Mars,Temp
+11,how many satellites orbit earth,Satellites,Count
+12,is space a vacuum,Astrophysics,Space
+13,why is mars red,Mars,Color
+14,when will mars be visible,Mars,Night Sky
+15,how big is mars,Mars,Size
+16,what is the atmosphere,Astrophysics,Atmosphere
+17,is mars bigger than earth,Mars,Size
+18,how long is a year on mars,Mars,Distance
+19,how much do astronauts make,Astronaut,Salary
+20,how to be an astronaut,Astronaut,Application
+21,does mars have an atmosphere,Mars,Astrophysics
+22,what are the layers of the atmosphere,Earth,Atmosphere
+23,where is the international space station,Satellites,ISS
+24,how long does it take to get to space,Space Exploration,
+25,who was the first man in space,Space Exploration,History
+26,where is the iss now,Satellites,ISS
+27,what does mars look like,Mars,Summary
+28,when can you see mars,Mars,Night Sky
+29,is mars in retrograde,Mars,Night Sky
+30,what does atmosphere mean,Astrophysics,Atmosphere
+31,does the moon have an atmosphere,Moon,Atmosphere
+32,who was the first american in space,Space Exploration,History
+33,can you see mars tonight,Mars,Night Sky
+34,when was mars discovered,Mars,Summary
+35,what does orbit mean,Solar System,Orbit
+36,can you see the great wall of china from space,Satellites,Man-made Objects Seen From Space
+37,what is the size of mars,Mars,Size
+38,what is the diameter of mars,Mars,Size
+39,how long does it take mars to orbit the sun,Solar System,Orbit
+40,can we live on mars,Mars,Human Capabilities
+41,what is the atmosphere of earth,Earth,Atmosphere
+42,where is the asteroid belt,Solar System,Asteroid Belt
+43,who was the first woman in space,Space Exploration,History
+44,why space is black,Astrophysics,
+45,how far is space,Earth,Atmosphere
+46,how big is the international space station,Satellites,ISS
+47,how many light years away is mars,Mars,Distance
+48,how big is mars compared to earth,Mars,Size
+49,where is mars in the sky,Mars,Night Sky
+50,why is mars called the red planet,Mars,Color
+51,does mars have water,Mars,
+52,what is a rover,Space Exploration,
+53,does mercury have an atmosphere,Mercury,Atmosphere
+54,what is earths atmosphere made of,Earth,Atmosphere
+55,where is the asteroid belt located,Solar System,Asteroid Belt
+56,what is an astronaut,Astronaut,Summary
+57,what is the international space station,Satellites,ISS
+58,who was the first person in space,Astronaut,First
+59,does mars have rings,Mars,Atmosphere
+60,what is a space shuttle,Space Exploration,Space Shuttle
+61,how fast does a space shuttle go,Space Exploration,Space Shuttle
+62,why is the atmosphere important,Earth,Atmosphere
+63,what is space time,Astrophysics,
+64,how high is the space station,Satellites,ISS
+65,what is the mass of mars,Mars,Size
+66,how much would i weigh on mars,Mars,
+67,does mars have a magnetic field,Mars,Atmosphere
+68,does mars have gravity,Mars,
+69,how fast is a space shuttle,Space Exploration,Space Shuttle
+70,what gases make up the atmosphere,Earth,Atmosphere
+71,where is kennedy space center,Nasa,Kennedy Space Center
+72,why is there no sound in space,Astrophysics,Sound
+73,how to go to space,Space Exploration,
+74,how much money do astronauts make,Astronaut,Salary
+75,what is a space station,Satellites,
+76,can you see mars from earth,Mars,Night Sky
+77,how was mars named,Mars,Mythology
+78,was there life on mars,Mars,Life
+79,can people live on mars,Mars,Human Capabilities
+80,can you breathe on mars,Mars,Human Capabilities
+81,what does a mars rover do,Mars,Rover
+82,how long does it take to orbit the earth,Satellites,
+83,does venus have an atmosphere,Venus,Atmosphere
+84,how high is the earths atmosphere,Earth,Atmosphere
+85,which process removes carbon dioxide from the atmosphere,Earth,Atmosphere
+86,what is the meaning of atmosphere,Earth,Atmosphere
+87,what is a space probe,Space Exploration,
+88,why space exploration is important,Space Exploration,
+89,do you age in space,Space Exploration,Human Capabilities
+90,what do astronauts do,Astronaut,
+91,how do you spell astronaut,Astronaut,
+92,what is a cosmonaut,Astronaut,
+93,how high is the international space station,Satellites,ISS
+94,what is the surface temperature of mars,Mars,Temp
+95,what is mars named after,Mars,Mythology
+96,does mars have oxygen,Mars,Atmosphere
+97,does mars have clouds,Mars,Atmosphere
+98,are there storms on mars,Mars,Atmosphere
+99,does mars have seasons,Mars,
+100,where are the space shuttles,Space Exploration,Space Shuttle
+101,what does satellite mean,Satellites,
+102,how many rovers are on mars,Mars,Rover
+103,what orbits the earth,Satellites,
+104,what is goldilocks zone,Space Exploration,Human Capabilities
+105,does saturn have an atmosphere,Saturn,Atmosphere
+106,does pluto have an atmosphere,Pluto,Atmosphere
+107,what is the definition of atmosphere,Earth,Atmosphere
+108,does jupiter have an atmosphere,Jupiter,Atmosphere
+109,can you shoot a gun in space,Space,Firing Gun
+110,how fast are we moving through space,Solar System,Orbit
+111,how fast does the space station travel,Satellites,ISS
+112,what is the temperature in outer space,Space,Temp
+113,how fast is the international space station moving,Satellites,ISS
+114,how fast does the space station travel,Satellites,ISS
+115,what is space exploration,Space Exploration,
+116,who was the first astronaut in space,Astronaut,First
+117,is the great wall of china visible from space,Satellites,Man-made Objects Seen From Space
+118,does it rain on mars,Mars,Atmosphere
+119,how much does a space shuttle weigh,Space Exploration,Space Shuttle
+120,what is satellite internet,Satellites,Cellular
+121,which layer of the atmosphere contains the ozone layer,Earth,Atmosphere
+122,does the sun have an atmosphere,Sun,Atmosphere
+123,can you see stars in space,Space,Night Sky
+124,how space was created,Big Bang,
+125,can birds fly in space,Space,
+126,does space ever end,Space,
+127,can you see the space station from earth,Satellites,ISS
+128,can sound travel through space,Astrophysics,Sound
+129,why was nasa created,Nasa,
+130,why space is dark,Other,
+131,can you fire a gun in space,Space,Firing Gun
+132,what time is it on mars,Mars,
+133,are there aliens on mars,Aliens,
+134,how to live on mars,Mars,Human Capabilities
+135,when did the space shuttle blow up,Space Exploration,Space Shuttle
+136,which space shuttle blew up,Space Exploration,Space Shuttle
+137,how much does a space shuttle cost,Space Exploration,Space Shuttle
+138,what is a satellite phone,Satellites,Cellular
+139,how does satellite internet work,Satellites,Cellular
+140,can you see satellites from earth,Satellites,
+141,what is a mars rover,Mars,Rover
+142,does neptune have an atmosphere,Neptune,Atmosphere
+143,does uranus have an atmosphere,Uranus,Atmosphere
+144,which layer of the atmosphere holds the ozone layer,Earth,Atmosphere
+145,which layer of the atmosphere protects earth from meteoroids,Earth,atmosphere
+146,which space shuttle blew up,Space Exploration,Space Shuttle
+147,what is space science,Astronomy,
+148,is space exploration worth the cost,Space Exploration,Cost
+149,can superman breathe in space,Other,
+150,what nasa is hiding,Other,
+151,who is on the international space station,Space Exploration,ISS
+152,when can i see the space station,Space Exploration,ISS
+153,what is the purpose of the international space station,Space Exploration,ISS
+154,what is space travel,Space Exploration,
+155,how fast is the earth moving through space,Solar System,
+156,how was space created,Big Bang,
+157,what is the temperature range on mars,Mars,Temp
+158,is nasa going to mars,Nasa,Planned Missions
+159,can plants grow on mars,Mars,Life
+160,was mars like earth,Mars,Geology
+161,does mars have volcanoes,Mars,Geology
+162,how to make a space shuttle,Space Exploration,Space Shuttle
+163,what space shuttle blew up,Space Exploration,Space Shuttle
+164,which space shuttle exploded,Space Exploration,Space Shuttle
+165,when was the first space shuttle launched,Space Exploration,Space Shuttle
+166,how many space shuttles were there,Space Exploration,Space Shuttle
+167,what is the meaning of satellite,Satellites,
+168,which planet has no atmosphere,Mercury,Atmosphere
+169,which layer of the atmosphere has the lowest temperature,Earth,Atmosphere
+170,which process adds carbon dioxide to the atmosphere,Earth,Atmosphere
+171,how to spell astronaut,Astronaut,
+172,is nasa government funded,Nasa,
+173,is nasa going to mars,Nasa,Planned Missions
+174,when was the international space station built,Space Exploration,ISS
+175,how many people are on the iss,Space Exploration,ISS
+176,who works on the international space station,Space Exploration,ISS
+177,is nasa a government agency,Nasa,
+178,how does the space shuttle take off,Space Exploration,Space Shuttle
+179,how do space shuttles land,Space Exploration,Space Shuttle
+180,how do satellite phones work,Satellites,Cellular
+181,what substances trap heat from the earth in the atmosphere,Earth,Atmosphere
+182,which layer of the atmosphere is the coldest,Earth,Atmosphere
+183,why are astronauts weightless in the space station,Astrophysics,Gravity
+184,does the van allen belt make space travel impossible,Space Exploration,
+185,which describes our understanding of flowing water on mars,Mars,Geology
+186,when was the challenger explosion,Space Exploration,Space Shuttle
+187,who invented the space shuttle,Space Exploration,Space Shuttle
+188,what are space shuttles made of,Space Exploration,Space Shuttle
+189,what is satellite phone,Satellites,Cellular
+190,which of the following worlds has the most substantial atmosphere,Venus,Atmosphere
+191,what planet has no atmosphere,Mercury,Atmosphere
+192,does earth have an atmosphere,Earth,Atmosphere
+193,which is the coldest layer of the atmosphere,Earth,Atmosphere
+194,what happens in space,Earth,Atmosphere
+195,is space travel possible,Space Exploration,
+196,can goku breathe in space,None,
+197,why space travel is important,Space Exploration,
+198,can there be fire in space,Other,
+199,does space have gravity,Astrophysics,
+200,can you see fireworks from space,Satellites,Man-made Objects Seen From Space
+201,who owns the international space station,Satellites,ISS
+202,is space travel possible,Space Exploration,
+203,why space travel is important,Space Exploration,
+204,how does light travel through space,Astrophysics,Light
+205,do you age slower in space,Space Exploration,Human Capabilities
+206,what does the international space station do,Satellites,ISS
+207,where are the space shuttles now,Space Exploration,Space Shuttle
+208,how big is a space shuttle,Space Exploration,Space Shuttle
+209,where does the space shuttle land,Space Exploration,Space Shuttle
+210,how many space shuttles blew up,Space Exploration,Space Shuttle
+211,how space shuttles work,Space Exploration,Space Shuttle
+212,how many space shuttles are there,Space Exploration,Space Shuttle
+213,what happened to space shuttle columbia,Space Exploration,Space Shuttle
+214,how many space shuttles,Space Exploration,Space Shuttle
+215,how fast do satellites move,Satellites,
+216,which planet in our solar system has the most satellites,Satellites,
+217,how high does the iss orbit,Satellites,ISS
+218,does europa have an atmosphere,Jupiter,Moon
+219,how far is the atmosphere from earth,Earth,Atmosphere
+220,why space exploration is bad,Space Exploration,
+221,which layer is closest to space,Earth,Atmosphere
+222,what spacecrafts visited mercury,Mercury,Missions
+223,who built the international space station,Satellites,ISS
+224,how to see the iss,Satellites,ISS
+225,how many space shuttles were built,Space Exploration,Space Shuttle
+226,where is space shuttle discovery,Space Exploration,Space Shuttle
+227,when was the space shuttle invented,Space Exploration,Space Shuttle
+228,what happened in columbia,None,
+229,how does a satellite phone work,Satellites,Cellular
+230,can you see satellites at night,Satellites,
+231,what orbits a planet,Satellites,
+232,how does atmospheric pressure change with altitude,Earth,Atmosphere
+233,where is the atmosphere,Earth,Atmosphere
+234,why space exploration is good,Space Exploration,
+235,are space aliens real,Space Exploration,Life
+236,how fast does light travel in space,Astrophysics,Light
+237,can i go to space,Astronaut,Application
+238,what space shuttle exploded,Space Exploration,Space Shuttle
+239,what was the first space shuttle,Space Exploration,Space Shuttle
+240,who built the space shuttle,Space Exploration,Space Shuttle
+241,can you see satellites,Satellites,Night Sky
+242,how satellite phones work,Satellites,Cellular
+243,can we see satellite from earth,Satellites,Night Sky
+244,are gps satellites geostationary,Satellites,Cellular
+245,how many robots are on mars,Mars,Rover
+246,when did the mars rover land,Mars,Rover
+247,what is the shape of orbits,Solar System,Orbit
+248,what is atmosphere in science,Earth,Atmosphere
+249,how do the atmospheres of the moon and mercury compare,Comparison,
+250,how many space stations are in orbit,Satellites,
+251,when to see iss,Satellites,ISS
+252,when did space exploration start,Space Exploration,History
+253,what are the three phases of space shuttle flight,Space Exploration,Space Shuttle
+254,how many space shuttle missions were there,Space Exploration,History
+255,how heavy is a space shuttle,Space Exploration,Space Shuttle
+256,can you see a satellite from earth,Satellites,
+257,can you use a satellite dish as an antenna,Satellites,Cellular
+258,what is the definition of satellite,Satellites,
+259,what is the name of the mars rover,Mars,Rover
+260,how many mars rovers are there,Mars,Rover
+261,how long does it take the iss to orbit earth,Satellites,ISS
+262,how to travel to space,Space Exploration,
+263,can sound waves travel through space,Astrophysics,Sound
+264,how old is the international space station,Satellites,ISS
+265,when did the first space shuttle launch,Space Exploration,Space Shuttle
+266,why did the space shuttle program end,Space Exploration,Space Shuttle
+267,where are all the space shuttles,Space Exploration,Space Shuttle
+268,how much is a space shuttle,Space Exploration,Space Shuttle
+269,can you see satellites with a telescope,Satellites,
+270,how often does google maps update satellite images,None,
+271,what is a space rover,Space Exploration,Rover
+272,when was the mars rover launched,Mars,Rover
+273,which spacecraft carried the first spacelab,Space Exploration,History
+274,how space suits work,Space Exploration,
+275,which astronaut hit a golf ball on the moon,Astronaut,
+276,can astronauts wear glasses,Astronaut,
+277,are there astronauts in space right now,Astronaut,
+278,how to make a space station,Space Exploration,
+279,does the space station move,Space Exploration,ISS
+280,how to travel in space,Space Exploration,
+281,can light travel through space,Astrophysics,Light
+282,when did the first rover land on mars,Mars,Rover
+283,how often does the iss orbit the earth,Space Exploration,ISS
+284,does space have mass,Astrophysics,
+285,can astronauts burp in space,Astronaut,
+286,can astronauts cry in space,Astronaut,
+287,does the international space station have gravity,Space Exploration,ISS
+288,is space travel possible for humans,Space Exploration,Human Capabilities
+289,what is space research,Astrophysics,
+290,can radio waves travel through space,Astrophysics,
+291,when was the first space flight,Space Exploration,History
+292,is space travel possible for humans,Space Exploration,Human Capabilities
+293,how to build a space shuttle,Space Exploration,Space Shuttle
+294,what shuttle blew up,Space Exploration,History
+295,what is a rover in space,Space Exploration,Rover
+296,what satellites have explored mars,Mars,
+297,is there a rover on mars,Mars,Rover
+298,are all asteroids found in the asteroid belt,Solar System,Asteroid Belt
+299,why space is cold,Astrophysics,
+300,which space shuttle exploded in 1986,Space Exploration,History
+301,how space affects the human body,Space Exploration,Human Capabilities
+302,can space exist without time,Astrophysics,
+303,are space suits comfortable,Space Exploration,
+304,what spacecraft visited uranus,Space Exploration,
+305,what is the international space station made of,Space Exploration,ISS
+306,can you see the space station with a telescope,Space Exploration,ISS
+307,how does space travel work,Space Exploration,
+308,is space travel real,Space Exploration,
+309,why go to space,Space Exploration,
+310,when did the mars rover launch,Mars,Rover
+311,is the curiosity rover still working,Mars,Rover
+312,how many objects orbit the earth,Satellites,
+313,what spacecraft visited pluto,Pluto,Spacecraft
+314,where do they launch space shuttles,Space Exploration,Space Shuttle
+315,should space exploration be continued,Space Exploration,
+316,what is happening in space right now,None,
+317,what spacecraft visited venus,Venus,Spacecraft
+318,what space sounds like,Astrophysics,Sound
+319,what spacecraft visited jupiter,Jupiter,Spacecraft
+320,are space and time an illusion,Astrophysics,Time
+321,what spacecraft visited mars,Mars,Spacecraft
+322,what is the future of space travel,Space Exploration,
+323,when will space travel be common,Space Exploration,
+324,what do rovers do,Space Exploration,Rover
+325,what was the first rover on mars,Mars,Rover
+326,what do mars rovers do,Mars,Rover
+327,who built the mars rover,Mars,Rover
+328,how many rovers have been to mars,Mars,Rover
+329,when did the mars rover land on mars,Mars,Rover
+330,is the mars rover still on mars,Mars,Rover
+331,when was the first rover sent to mars,Mars,Rover
+332,does the asteroid belt orbit the sun,Solar System,Asteroid Belt
+333,should space exploration be privatized,Space Exploration,
+334,how space time works,Astrophysics,Time
+335,which space shuttle flew the most missions,Space Exploration,Space Shuttle
+336,how fast does a bullet travel in space,Astrophysics,Firing Gun
+337,what has space exploration done for us,Space Exploration,
+338,can heat travel through space,Astrophysics,
+339,what is the mars rover called,Mars,Rover
+340,can you see the asteroid belt from earth,Solar System,Asteroid Belt
+341,does the asteroid belt have an atmosphere,Solar System,Asteroid Belt
+342,does the asteroid belt have moons,Solar System,Asteroid Belt
+343,how space shuttle launch,Space Exploration,Space Shuttle
+344,how would space combat work,Space Exploration,
+345,how space suits are made,Astronaut,
+346,what are the names of the 2 rovers exploring mars,Mars,Rover
+347,what is the robot on mars called,Mars,Rover
+348,how many probes are on mars,Mars,Rover
+349,what does goldilocks zone mean,Space Exploration,Human Capabilities
+350,why do they call it the goldilocks zone,Space Exploration,Human Capabilities
+351,where is the goldilocks zone in our solar system,Space Exploration,Human Capabilities
+352,what is the goldilocks zone in space,Space Exploration,Human Capabilities
+353,how wide is the habitable zone in our solar system,Space Exploration,Human Capabilities
+354,what planets are in the habitable zone in our solar system,Space Exploration,Human Capabilities
+355,what will happen to the habitable zone in our solar system as the sun gets older,Space Exploration,Human Capabilities
+356,what is the goldilocks zone and why is it important,Space Exploration,Human Capabilities
+357,what is the goldilocks zone and why is it important to scientists,Space Exploration,Human Capabilities
+358,what is the goldilocks zone of a planet,Space Exploration,Human Capabilities
+359,what are goldilocks zone,Space Exploration,Human Capabilities
+360,how many goldilocks zone in the entire universe,Space Exploration,Human Capabilities
+361,how to calculate goldilocks zone,Space Exploration,Human Capabilities
+362,is mars in goldilocks zone,Space Exploration,Human Capabilities
+363,is venus in goldilocks zone,Space Exploration,Human Capabilities
+364,who coined the term goldilocks zone,Space Exploration,Human Capabilities
+365,are all asteroids in the asteroid belt,Solar System,Asteroid Belt
+366,does the asteroid belt have gravity,Solar System,Asteroid Belt
+367,does the asteroid belt have any moons,Solar System,Asteroid Belt
+368,does asteroid belt look like picture,Solar System,Asteroid Belt
+369,are all asteroids in asteroid belt,Solar System,Asteroid Belt
+370,are there meteorites in the asteroid belt,Solar System,Asteroid Belt
+371,can the asteroid belt be seen from earth,Solar System,Asteroid Belt
+372,can you see the asteroid belt from mars,Solar System,Asteroid Belt
+373,can you see the asteroid belt with a telescope,Solar System,Asteroid Belt
+374,does asteroid belt have any moons,Solar System,Asteroid Belt
+375,does saturn have an asteroid belt,Saturn,
+376,does the asteroid belt have a rotation,Solar System,Asteroid Belt
+377,does the asteroid belt have a temperature,Solar System,Asteroid Belt
+378,how was the asteroid belt named,Solar System,Asteroid Belt
+379,are all asteroids found in the asteroid belt explain,Solar System,Asteroid Belt
+380,does the asteroid belt have any rings,Solar System,Asteroid Belt
+381,does uranus have an asteroid belt,Uranus,
+382,does the asteroid belt have rings,Solar System,Asteroid Belt
+382,does the asteroid belt have rings,Solar System,Asteroid Belt

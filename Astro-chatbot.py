@@ -10,25 +10,31 @@
 # =========================================================================================================
 
 import re
+import math
 from collections import defaultdict
-# thread allows us to lookup without interruption
-import threading
-# os allows us to connect to the internet, see here:
-# https://stackoverflow.com/questions/54479347/simplest-way-to-connect-wifi-python
-import os
 
 dst = defaultdict(list)
+
+# wikisetup
+# prepare to get wiki articles, for now it will just load some that we need but later will wait for user
+def wiki(query):
+    #first, get the subject from the query, i.e. if the query was:
+    # "how long does it take to get to mars"
+    # (the most commonly googled question relating to astronomy)
+    # the question is asking distance -> mars in days, so accessing the article on "mars exploration"
+    
+    #https://courses.cs.washington.edu/courses/cse163/20wi/hw4/overview.html
+    pass
 
 # nlu(input): Interprets a natural language input and identifies relevant slots and their values
 # Input: A string of text.
 # Returns: A list ([]) of (slot, value) pairs.  Slots should be strings; values can be whatever is most
 #          appropriate for the corresponding slot.  If no slot values are extracted, the function should
 #          return an empty list.
-# Spawns: A lookup in a seperate thread (if possible) based on the user's query, 
-#         which will block at nlp function for the query to return with wikipedia results
-#         will have other sources as well, but rely mostly on wikipedia
 def nlu(input=""):
     slots_and_values = []
+
+    # at first, this will just look up against a few articles hosted on the machine, to get this out as asap as possible
 
     # Get the user's intent, and if it's to ask a question (or confirm a statement) spawn a worker
     # thread to lookup results online.
@@ -48,20 +54,17 @@ def nlu(input=""):
     # User intent is most likey to be found in the text and grammar of the input, not in the dialogue history
     # thus, send the dialogue to the parser
     parsed = parse(input)
-
-
-
     
     # To narrow the set of expected slots, you may (optionally) first want to determine the user's intent,
     # based on what the chatbot said most recently.
     if "dialogue_state_history" in dst:
-        if dst["dialogue_state_history"][0] == "request_size":
-            # Check to see if the input contains a valid size.
-            pattern = re.compile(r"\b([Ss]mall)|([Mm]edium)|([Ll]arge)\b")
+        if dst["dialogue_state_history"][0] == "greetings":
+            # Check to see if the input matches any of the pre-defined states.
+            pattern = re.compile(r"([Ww]ho|[Ww]hat) are you[?]")
             match = re.search(pattern, input)
             if match:
-                user_intent = "respond_size"
-                slots_and_values.append(("user_intent_history", ["respond_size"]))
+                user_intent = "who_am_i"
+                slots_and_values.append(("user_intent_history", ["who_am_i"]))
             else:
                 user_intent = "unknown"
                 slots_and_values.append(("user_intent_history", ["unknown"]))
@@ -81,7 +84,9 @@ def nlu(input=""):
                 else:
                     user_intent = "unknown"
                     slots_and_values.append(("user_intent_history", ["unknown"]))
-            
+
+    # parse user input to find intent
+    
     
     # Then, based on what type of user intent you think the user had, you can determine which slot values
     # to try to extract.
@@ -148,7 +153,8 @@ def get_dst(slot=""):
 #          are needed).
 
 # TODO: Look into user intents/slot values
-#https://discover.bot/bot-talk/define-and-design-intents-for-your-bot/
+#https://towardsdatascience.com/natural-language-understanding-with-sequence-to-sequence-models-e87d41ad258b
+#https://towardsdatascience.com/representing-text-in-natural-language-processing-1eead30e57d8
 def dialogue_policy(dst=[]):
     next_state = "greetings"
     slot_values = []
@@ -183,6 +189,7 @@ def dialogue_policy(dst=[]):
         next_state = "question"
     else:
         pass
+
     
     update_dst([("dialogue_state_history", [next_state])])
     return next_state, slot_values
@@ -192,23 +199,21 @@ def dialogue_policy(dst=[]):
 # Returns: A string representing a sentence generated for the specified state, optionally
 #          including the specified slot values if they are needed by the template.
 def nlg(state, slots=[]):
-    # [YOUR CODE HERE]
-    
-    # Dummy code for sample output (delete or comment out when writing your code!):
+    # non-answer results can be pre-generated:
+    #'greetings','question','statement','unknown','learn_more','inappropriate_speech','goodbye'
     templates = defaultdict(list)
     
-    # Build at least two templates for each dialogue state that your chatbot might use.
     templates["greetings"] = []
-    templates["greetings"].append("Hi, welcome to 421Pizza!  Would you like to order a pizza?")
-    
-    templates["clarification"] = []
-    templates["clarification"].append("Just double-checking ...did you say that you want <num_pizzas> pizzas?")
-    
-    templates["repeat"] = []
-    templates["repeat"].append("I'm sorry, I didn't understand what you said.  Can you answer my original question in a way that I might understand it better?")
-    
+    templates["greetings"].append("Hello, I am a robot that can find the answer to any question you have about space.")
+    templates["greetings"].append("Greetings, earthling. I'm a robot that knows things about the cosmos.")
+
+    templates["inappropriate_speech"].append("That's not very appropriate.")
+    templates["inappropriate_speech"].append("Could you phrase that differently?")
+    templates["inappropriate_speech"].append("Don't be rude.")
+
     templates["terminate"] = []
-    templates["terminate"].append("Okay, it was great chatting with you.  Have a nice day!")
+    templates["terminate"].append("Alrighty, come back if there's anything else you're curious about!")
+    templates["terminate"].append("I hope I helped you find what you're looking for! Stay curious.")
     
     # When you implement this for real, you'll need to randomly select one of the templates for
     # the specified state, rather than always selecting template 0.  You probably also will not
@@ -252,19 +257,26 @@ def parse(input=""):
         V = [{}]
         # Cardinality of the state sequence
         K = len(observations)
-        # Set up the initial probabilites and backpointer:
+        # Set up the backpointer matrix:
+        B = [{}]
         # see trans_prob above for explanation: [1/k] * K makes a 1D array size K filled with values of 1/K
         trans_prob = trans_prob if trans_prob is not None else [1/K] * K
         # it's 1-K, but 1+k here becuase of how range() works
-        for state in range(1,1+K):
+        for state in range(1,K):
             # multiply trans_prob by emission_matrix at state
             V[0][state] = {trans_prob[state]*emission_matrix[state]}
-            # backpointer is a 1D array
-            # TODO: implement backpointer
-            pass
+        for observation in range(1, len(observations)):
+            for state in range(len(state_matrix)):
+                pass
         pass
 
-
+# lookup will take a question(string) and will look up results on wikipedia, gather results,
+# and then parse through them to find an answer; then, if the user was looking for an answer
+# will respond with the relevant answer and source(s); if the user said a statement and wanted
+# confirmation, will respond with either yes, the statement is accurate, or not it is not,
+# with the same info as if answering a question and source(s)
+def lookup(question=""):
+    pass
 
 
 # Use this main function to test your code when running it from a terminal
